@@ -146,10 +146,9 @@ const GroupedPostList = ({ posts, type }: { posts: Post[], type: 'diary' | 'stat
                            <span className="text-xs text-jade/80 font-mono">End</span>
                         </div>
                       </div>
-                      
-                      {!openDiaryId === post.id && (
-                        <p className="text-beiming/40 text-sm line-clamp-1 font-light mt-1">{post.content}</p>
-                      )}
+                      {openDiaryId !== post.id && (
+  <p className="text-beiming/40 text-sm line-clamp-1 font-light mt-1">{post.content}</p>
+)}
                     </div>
                   </div>
                 ))}
